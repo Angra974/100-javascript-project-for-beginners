@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		flex-direction: column;
+        margin-top: 15%;
+      }
+	  div {
+		margin: 20px;
+	  }
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <div id="quoted"></div>
+	<div>
+	<button>Show a quote</button>
+	</div>
+    <script>
+	
+	 var quotes = [
+    ["Stay Hungry. Stay Foolish.", "Steve Jobs"],
+    ["Good Artists Copy, Great Artists Steal.", "Pablo Picasso"],
+    ["Argue with idiots, and you become an idiot.", "Paul Graham"],
+    ["Be yourself; everyone else is already taken.", "Oscar Wilde"],
+    ["Simplicity is the ultimate sophistication.", "Leonardo Da Vinci"],
+    ["Heartbreak is a loss. Divorce is a piece of paper.", "Taylor Jenkins Reid"],
+  ];
+
+
+      const btn = document
+        .querySelector("button")
+        .addEventListener("click", () => {
+			// get a random number between 0 to length of the quotes array
+			const randomQuoteNumber = Math.floor(Math.abs(Math.random() - 0.5) * quotes.length); 
+			console.log(randomQuoteNumber);
+			document.getElementById('quoted').textContent = quotes[randomQuoteNumber];
+			})
+    </script>
+  </body>
+</html>
