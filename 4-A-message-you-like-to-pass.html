@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		flex-direction: column;
+        margin-top: 15%;
+		background-color: blue;
+      }
+	  .container {
+		width: 500px;
+		height: 200px;
+		background: #fff;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+    border-radius: 20px;
+	  }
+
+    .lastMessage  {
+      color: #DEDE31;
+      font-weight: 20px;
+      background-color: #000;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+	<div class="container">
+		<p>A message you like to pass?</p>
+    <span class="error"></span>
+		<form action="#">
+			<input type="text" name="message" id="message" placeholder="Deliver this message" />
+			<button type="submit">Submit</button>
+		</form>
+		<p>Last Message Delivered</p>
+		<p class="lastMessage"></p>
+	</div>
+    <script>
+
+    const lastMessage = document.querySelector('.lastMessage');
+
+    const button = document.querySelector('button');
+    const inputEl = document.querySelector('input');
+    const error = document.querySelector('.error');
+
+    button.addEventListener('click', (e) => {
+
+      // Don't send the form
+      e.preventDefault();
+        // no data in input element ( or empty)
+        if(!inputEl.value ) {
+          error.textContent = 'Please, add a message first';
+            setTimeout(() => {
+              error.textContent = '';
+            }, 3000);
+
+        } else {
+          lastMessage.textContent = inputEl.value;
+        }
+    })
+
+    window.addEventListener('DOMContentLoaded', () => lastMessage.textContent = 'DO THIS PROJECT!'
+)
+     </script>
+  </body>
+</html>

@@ -18,9 +18,29 @@
         align-items: center;
 		flex-direction: column;
         margin-top: 15%;
+		background-color: blue;
       }
+	  .container {
+		width: 500px;
+		height: 200px;
+		background: #fff;
+		position: relative;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	  }
 	  div {
 		margin: 20px;
+	  }
+	  
+	  #author {
+		color: aquamarine;
+		font-size: 25px;
+		font-weight: bold;
+	  }
+	  button  {
+		position: absolute;
+		bottom: 10px;
 	  }
     </style>
   </head>
@@ -31,9 +51,12 @@
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
-    <div id="quoted"></div>
-	<div>
-	<button>Show a quote</button>
+	<div class="container">
+		<div id="quoted"></div>
+		<div id="author"></div>
+		<div>
+		<button>Show a quote</button>
+		</div>
 	</div>
     <script>
 	
@@ -53,7 +76,8 @@
 			// get a random number between 0 to length of the quotes array
 			const randomQuoteNumber = Math.floor(Math.abs(Math.random() - 0.5) * quotes.length); 
 			console.log(randomQuoteNumber);
-			document.getElementById('quoted').textContent = quotes[randomQuoteNumber];
+			document.getElementById('quoted').textContent = quotes[randomQuoteNumber][0];
+			document.getElementById('author').textContent = quotes[randomQuoteNumber][1];
 			})
     </script>
   </body>
