@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .app {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                text-align: center;
+                width: 200px;
+                margin: 20px;
+                border: 2px solid blue;
+                border-radius: 20px;;
+            }
+            span, button {
+                font-size:30px;
+            }
+            span.counter {
+                font-size: 120px;
+                color: green;
+            }
+
+            button {
+                background-color: maroon;
+                color: white;
+            }
+
+            .upper {
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+            <div class="app">
+            <span>Counter</span>
+            <span class="counter">0</span>
+            <button class="lower">Lower count</button>
+            <button class="upper">Add count</button>
+            </div>
+
+        </div>
+        <script>
+                const lower = document.querySelector('.lower');
+                const upper = document.querySelector('.upper');
+                const counter = document.querySelector('.counter');
+
+                lower.addEventListener('click', () => {
+                    counter.textContent = Number(counter.textContent) - 1;
+                })
+                upper.addEventListener('click', () => {
+                    counter.textContent = Number(counter.textContent) + 1;
+                })
+        </script>
+    </body>
+</html>
