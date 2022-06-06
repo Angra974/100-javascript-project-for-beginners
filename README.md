@@ -17,3 +17,7 @@ as a practice.
 
 ##### Project 5 : Counter Project
 
+##### Project 6 : Images slider
+I've cloned the repository to get the image and the display ready to be used.
+I've deleted the js files ( jquery/bootstrap ) and start the app.js file from scratch.
+
