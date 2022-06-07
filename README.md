@@ -21,3 +21,8 @@ as a practice.
 I've cloned the repository to get the image and the display ready to be used.
 I've deleted the js files ( jquery/bootstrap ) and start the app.js file from scratch.
 
+##### Project 7 : testimonial-project
+I didn't use the css for the stars, so you won't see them as the goal was to play
+with the javascript. AS for me, there are not really many change with precedent project, 
+i let it as if, just to change the content.
+With more time i will look at what the original project is and how the author did handle it.
