@@ -26,3 +26,5 @@ I didn't use the css for the stars, so you won't see them as the goal was to pla
 with the javascript. AS for me, there are not really many change with precedent project, 
 i let it as if, just to change the content.
 With more time i will look at what the original project is and how the author did handle it.
+
+##### Project 8 : filter-product
