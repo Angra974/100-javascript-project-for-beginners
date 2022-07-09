@@ -1,30 +1,37 @@
 # 100-javascript-project-for-beginners
 
-While wandering on internet, i stutton on this wonderful article at 
+While wandering on internet, i "ve found this wonderful article at
 https://jsbeginners.com/javascript-projects-for-beginners/
 
 I think it's not a bad think when i have some spare time to made them,
 as a practice.
 
+## Project list
 
-##### Project 1 : Change Background Color Project
+1. [Change Background Color Project](p01-Change-Background-Color-Project)
 
-##### Project 2 : Hex Change Background Color Project
+1. [Hex Change Background Color Project](p02-Hex-Change-Background-Color-Project)
 
-##### Project 3 : Random Quotes Project
+1. [Random Quotes Project](p03-Random-Quotes-Project)
 
-##### Project 4 : Pass the Message Project
+1. [Pass the Message Project](p04-A-Message-You-Like-To-Pass)
 
-##### Project 5 : Counter Project
+1. [Counter Project](p05-Counter-App)
 
-##### Project 6 : Images slider
-I've cloned the repository to get the image and the display ready to be used.
-I've deleted the js files ( jquery/bootstrap ) and start the app.js file from scratch.
+1. [Images slider](p06-background-image-slider-project)
 
-##### Project 7 : testimonial-project
-I didn't use the css for the stars, so you won't see them as the goal was to play
-with the javascript. AS for me, there are not really many change with precedent project, 
-i let it as if, just to change the content.
-With more time i will look at what the original project is and how the author did handle it.
+1. [Testimonial-project](p07-testimonial-project)
 
-##### Project 8 : filter-product
+1. [Filter-product](p08-filter-project)
+
+1. [Modal Javascript Project](p09-Modal-JavaScript-Project)
+
+1. [Calculator](p10-Calculator-JavaScript-Project)
+
+1. [Tips form](p11-Tip-Form-JavaScript-Project)
+
+1. [Todo List](p12-todo-list-project-2)
+
+1. [Grocery Cart](p13-grocery-cart-project)
+
+1. [Grocery List](p14-grocery-list-project)

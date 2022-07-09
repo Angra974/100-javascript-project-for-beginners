@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15%;
+        background-color: #eee;
+      }
+
+      .bigSquare {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 400px;
+        height: 400px;
+        background-color: #000;
+        color: #fff;
+      }
+
+      .smallSquare {
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        color: #000;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <div class="bigSquare">
+        <span>Bit square is outide</span>
+
+    <div class="smallSquare">
+        <span>Inside</span>
+
+
+    </div>
+
+
+    </div>
+
+
+    <script>
+            document.querySelector('.smallSquare').addEventListener('click',function(e){ console.log('clicked inside'), e.stopPropagation() },true);
+            document.querySelector('.bigSquare').addEventListener('click', function(){ console.log('clicked outside') }, false);
+    </script>
+  </body>
+</html>
