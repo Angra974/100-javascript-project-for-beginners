@@ -35,3 +35,5 @@ as a practice.
 1. [Grocery Cart](p13-grocery-cart-project)
 
 1. [Grocery List](p14-grocery-list-project)
+
+1. [Gorcery List 2](p15-grocery-list-project-2)

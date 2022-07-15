@@ -15,29 +15,39 @@ const groceryList = (localStorage.getItem("groceryList") && JSON.parse(localStor
  */
 groceryList.length > 0 && groceryList.forEach((item) => addItemToList(item, false));
 
+
 /**
  *
  * @param {childNode} el children element to remove from the html
  */
-function removeItemFromList(el) {
-    // parent element
-    const itemNode = el.target.parentNode.parentNode;
+	function removeItemFromList(el) {
+        // parent element
+        // if not icon trash eelement
+        if(!el.target.classList.includes("fa-trash")) return false;
 
-    // top position of the list item
-    const itemPosition = Array.prototype.indexOf.call(listItems.childNodes, itemNode);
+        const itemNode = el.target.parentNode.parentNode;
+        // top position of the list item
+        const itemPosition = Array.prototype.indexOf.call(list.childNodes, itemNode);
 
-    // delete reference in groceryList array
-    groceryList.splice(itemPosition - 1, 1);
+        // delete reference in groceryList array
+        let position = itemPosition - 1;
 
-    // delete element from html interface
-    itemNode.remove();
+        groceryList.splice(position, 1);
 
-    // remove list from localStorage
-    localStorage.removeItem("groceryList");
+        // delete element from html interface
+       itemNode.remove();
 
-    // add New modified array in localStorage
-    localStorage.setItem("groceryList", JSON.stringify(groceryList));
-}
+        // remove list from localStorage
+        localStorage.removeItem("groceryList");
+		
+        // add New modified array in localStorage
+        localStorage.setItem("groceryList", JSON.stringify(groceryList));
+             el.stopPropagation();
+
+    }
+
+
+
 
 /**
  *
